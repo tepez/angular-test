@@ -23284,7 +23284,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
 
 
     if (modelValue !== ctrl.$modelValue &&
-      !(typeof value === 'number' && typeof last === 'number' && isNaN(value) && isNaN(last))) {
+      !(typeof modelValue === 'number' && typeof ctrl.$modelValue === 'number' && isNaN(modelValue) && isNaN(ctrl.$modelValue))) {
       ctrl.$modelValue = ctrl.$$rawModelValue = modelValue;
       parserValid = undefined;
 
